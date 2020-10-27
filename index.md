@@ -193,7 +193,7 @@ An object representing a Server.
 
 Field Name | Type | Description
 ---|:---:|---
-<a name="server-name"></a>name | `string` | **REQUIRED**. A name to be used as the cannonical name for the server.
+<a name="server-name"></a>name | `string` | **REQUIRED**. A name to be used as the canonical name for the server.
 <a name="server-url"></a>url | [Runtime Expression](#runtime-expression) | **REQUIRED**. A URL to the target host.  This URL supports Server Variables and MAY be relative, to indicate that the host location is relative to the location where the OpenRPC document is being served. [Server Variables](#server-variables) are passed into the [Runtime Expression](#runtime-expression) to produce a server URL.
 <a name="server-summary"></a>summary | `string` | A short summary of what the server is.
 <a name="server-description"></a>description | `string` | An optional string describing the host designated by the URL. [GitHub Flavored Markdown syntax](https://github.github.com/gfm/) MAY be used for rich text representation.
@@ -219,7 +219,7 @@ Describes the interface for the given method name. The method name is used as th
 
 Field Name | Type | Description
 ---|:---:|---
-<a name="method-name"></a>name | `string` | **REQUIRED**. The cannonical name for the method. The name MUST be unique within the methods array.
+<a name="method-name"></a>name | `string` | **REQUIRED**. The canonical name for the method. The name MUST be unique within the methods array.
 <a name="method-tags"></a>tags | [[Tag Object](#tag-object) \| [Reference Object](#reference-object)] | A list of tags for API documentation control. Tags can be used for logical grouping of methods by resources or any other qualifier.
 <a name="method-summary"></a>summary | `string` | A short summary of what the method does.
 <a name="method-description"></a>description | `string` | A verbose explanation of the method behavior. [GitHub Flavored Markdown syntax](https://github.github.com/gfm/) MAY be used for rich text representation.
@@ -278,7 +278,7 @@ The Example object is an object the defines an example that is intended to match
 
 Field Name | Type | Description
 ---|:---:|---
-<a name="example-name"></a>name | `string` | Cannonical name of the example.
+<a name="example-name"></a>name | `string` | Canonical name of the example.
 <a name="example-summary"></a>summary | `string` | Short description for the example.
 <a name="example-description"></a>description | `string` | A verbose explanation of the example. [GitHub Flavored Markdown syntax](https://github.github.com/gfm/) MAY be used for rich text representation.
 <a name="example-value"></a>value | Any | Embedded literal example. The `value` field and `externalValue` field are mutually exclusive. To represent examples of media types that cannot naturally represented in JSON, use a string value to contain the example, escaping where necessary.
@@ -299,7 +299,7 @@ For computing links, and providing instructions to execute them, a [runtime expr
 
 Field Name  |  Type  | Description
 ---|:---:|---
-<a name="link-name"></a>name | `string` | **REQUIRED**. Cannonical name of the link.
+<a name="link-name"></a>name | `string` | **REQUIRED**. Canonical name of the link.
 <a name="link-description"></a>description  | `string` | A description of the link. [GitHub Flavored Markdown syntax](https://github.github.com/gfm/) MAY be used for rich text representation.
 <a name="link-summary"></a>summary | `string` | Short description for the link.
 <a name="link-method"></a>method | `string` | The name of an _existing_, resolvable OpenRPC method, as defined with a unique `method`. This field MUST resolve to a unique [Method Object](#method-object). As opposed to Open Api, Relative `method` values  ARE NOT permitted.
